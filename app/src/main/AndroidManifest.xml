@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".DangKiTOTP.ThongTinDangKyTOTP"
+            android:configChanges="screenSize"
+            android:permission="${applicationId}.permission.CALL_ACTIVITY"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan"/>
     </application>
 
 </manifest>
