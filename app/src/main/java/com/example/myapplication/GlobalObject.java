@@ -1,5 +1,8 @@
 package com.example.myapplication;
 
-class GlobalObject {
-    public static final String BASE_URL = "http://127.0.0.1:9000/";
+import java.util.UUID;
+
+public class GlobalObject {
+    public static final String BASE_URL = "http://192.168.40.108:9000/";
+    public static final String REGISTER_ID = "vanxjnkdep199x";
 }

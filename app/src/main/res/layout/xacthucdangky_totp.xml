@@ -13,8 +13,9 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Xác thực 2 yếu tố"
-            android:textColor="#000000"
-            android:textSize="16sp"
+            android:textColor="@color/blueColor"
+            android:textAllCaps="true"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <ImageView
@@ -38,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nhập mã xác thực"
-            android:textColor="#000000"
+            android:textColor="@color/blueColor"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -62,6 +63,8 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="300dp"
-            android:text="Tiếp tục" />
+            android:text="Tiếp tục"
+            android:textColor="@color/white"
+            android:background="@color/blueColor"/>
     </LinearLayout>
 </LinearLayout>
