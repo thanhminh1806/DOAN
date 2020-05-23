@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.example.myapplication.ChuyenTien.ChuyenTien;
 import com.example.myapplication.DangKiTOTP.ThongTinDangKyTOTP;
 import com.example.myapplication.HuyDangKyTOTP.HuyDangKyTOTP;
 
@@ -30,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initListener(){
+        layout_chuyentien.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openChuyenTien();
+            }
+        });
+
         layout_dangkiTOTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,6 +60,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void openHuyDangKyTOTP() {
         Intent intent = new Intent(this, HuyDangKyTOTP.class);
+        startActivity(intent);
+    }
+
+    private void openChuyenTien() {
+        Intent intent = new Intent(this, ChuyenTien.class);
         startActivity(intent);
     }
 }
