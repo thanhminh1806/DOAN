@@ -8,12 +8,15 @@ public class ParamDetailModel {
     public String getRegisterid() {
         return registerid;
     }
+
     public void setRegisterid(String registerid) {
         this.registerid = registerid;
     }
+
     public String getToken() {
         return token;
     }
+
     public void setToken(String token) {
         this.token = token;
     }

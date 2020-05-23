@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.example.myapplication.DangKiTOTP.ThongTinDangKyTOTP;
+import com.example.myapplication.HuyDangKyTOTP.HuyDangKyTOTP;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,13 +33,25 @@ public class MainActivity extends AppCompatActivity {
         layout_dangkiTOTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchActivity();
+                openDangKyTOTP();
+            }
+        });
+
+        layout_huydangkiTOTP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHuyDangKyTOTP();
             }
         });
     }
 
-    private void launchActivity() {
+    private void openDangKyTOTP() {
         Intent intent = new Intent(this, ThongTinDangKyTOTP.class);
+        startActivity(intent);
+    }
+
+    private void openHuyDangKyTOTP() {
+        Intent intent = new Intent(this, HuyDangKyTOTP.class);
         startActivity(intent);
     }
 }

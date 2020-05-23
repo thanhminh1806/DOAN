@@ -16,6 +16,7 @@
             android:textColor="#000000"
             android:layout_centerInParent="true"/>
         <ImageView
+            android:id="@+id/img_backmain"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:src="@drawable/back"
@@ -40,7 +41,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Vui lòng dùng ứng dụng xác thực Google Authenticator để quyets mã QR này."
+            android:text="Vui lòng dùng ứng dụng xác thực Google Authenticator để quét mã QR này."
             android:textSize="16sp"/>
 
         <ImageView

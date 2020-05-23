@@ -26,6 +26,21 @@
             android:permission="${applicationId}.permission.CALL_ACTIVITY"
             android:screenOrientation="locked"
             android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".DangKiTOTP.XacThucDangKyTOTP"
+            android:configChanges="screenSize"
+            android:permission="${applicationId}.permission.CALL_ACTIVITY"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".HuyDangKyTOTP.HuyDangKyTOTP"
+            android:configChanges="screenSize"
+            android:permission="${applicationId}.permission.CALL_ACTIVITY"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".HuyDangKyTOTP.XacThucHuyDangKyTOTP"
+            android:configChanges="screenSize"
+            android:permission="${applicationId}.permission.CALL_ACTIVITY"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan"/>
     </application>
 
 </manifest>
