@@ -133,6 +133,7 @@
                 android:layout_marginBottom="10dp"
                 android:text="Thông tin giao dịch"
                 android:textColor="@color/blueColor"
+                android:textStyle="bold"
                 android:textSize="20sp" />
 
             <EditText
@@ -143,7 +144,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Xem hạn mức giao dịch"
+                android:text="@string/HanMucGiaoDich"
                 android:textStyle="italic" />
 
             <Button
@@ -151,9 +152,9 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
-                android:text="Tiếp tục"
+                android:text="@string/TiepTuc"
                 android:textColor="@color/white"
-                android:background="@color/blueColor"/>
+                android:background="@drawable/bg_custom_button"/>
 
         </LinearLayout>
     </ScrollView>

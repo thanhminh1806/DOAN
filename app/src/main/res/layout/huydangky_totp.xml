@@ -47,7 +47,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Bạn sẽ không xác thực bằng tính năng TOTP khi thực hiện giao dịch nữa.\nĐể đăng ký lại, vui lòng chọn chức năng đăng ký hoặc đến trực tiếp quầy giao dịch để nhận được hỗ trợ."
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -60,9 +61,10 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:text="Tắt"
+                android:text="@string/Tat"
                 android:textColor="@color/white"
-                android:background="@color/blueColor"/>
+                android:background="@drawable/bg_custom_button"
+                android:layout_marginBottom="30dp"/>
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

@@ -10,7 +10,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.ApiService;
+import com.example.myapplication.ChuyenTien.XacThucChuyenTien;
 import com.example.myapplication.ConnectApiServer;
+import com.example.myapplication.CustomDialog;
 import com.example.myapplication.GlobalObject;
 import com.example.myapplication.R;
 
@@ -57,7 +59,7 @@ public class ThongTinDangKyTOTP extends AppCompatActivity {
                                 openThongTinDangKyQRCode(ImageBase64, secretKey);
                             }
                         }else {
-                            Toast.makeText(ThongTinDangKyTOTP.this, "Tài khoản đã đăng ký TOTP", Toast.LENGTH_SHORT).show();
+                            CustomDialog.showDialog(ThongTinDangKyTOTP.this, getString(R.string.notification), getString(R.string.TKDaDangKyTOTP));
                         }
                     }
 

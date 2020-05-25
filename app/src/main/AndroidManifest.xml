@@ -11,13 +11,18 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"
+            android:configChanges="screenSize"
+            android:permission="${applicationId}.permission.CALL_ACTIVITY"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".DangKiTOTP.ThongTinDangKyTOTP"
             android:configChanges="screenSize"
             android:permission="${applicationId}.permission.CALL_ACTIVITY"
@@ -49,6 +54,11 @@
             android:screenOrientation="locked"
             android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".ChuyenTien.XacThucChuyenTien"
+            android:configChanges="screenSize"
+            android:permission="${applicationId}.permission.CALL_ACTIVITY"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".ThanhCongActivity"
             android:configChanges="screenSize"
             android:permission="${applicationId}.permission.CALL_ACTIVITY"
             android:screenOrientation="locked"

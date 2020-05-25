@@ -13,9 +13,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.ApiService;
 import com.example.myapplication.ConnectApiServer;
+import com.example.myapplication.CustomDialog;
 import com.example.myapplication.GlobalObject;
 import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
+import com.example.myapplication.ThanhCongActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -47,7 +49,7 @@ public class XacThucDangKyTOTP extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(edt_nhapma.getText().toString().isEmpty()){
-                    Toast.makeText(XacThucDangKyTOTP.this, "Vui lòng nhập mã xác thực", Toast.LENGTH_SHORT).show();
+                    CustomDialog.showDialog(XacThucDangKyTOTP.this, getString(R.string.notification), getString(R.string.NhapMaXacThuc));
                 }else {
                     XacThucOTPTruyenvao_Model xacThucOTPTruyenvao_model = new XacThucOTPTruyenvao_Model("12345"
                             , "auth", new XacThucOTPTruyenvao_Model.Detail("auth", GlobalObject.REGISTER_ID, edt_nhapma.getText().toString()));
@@ -57,12 +59,12 @@ public class XacThucDangKyTOTP extends AppCompatActivity {
                             Log.d("onResponse", "onResponse: " + response.toString());
                             if(response.body() != null && response.body().getDetail()!=null) {
                                 if ("0".equals(response.body().getEc().toString())) {
-                                    backMainMenu();
+                                    openHuyThanhCongActivity("2");
                                 } else {
 
                                 }
                             }else{
-                                Toast.makeText(XacThucDangKyTOTP.this, "Sai mã xác thực", Toast.LENGTH_SHORT).show();
+                                CustomDialog.showDialog(XacThucDangKyTOTP.this, getString(R.string.notification), getString(R.string.SaiMaXacThuc));
                             }
                         }
 
@@ -84,6 +86,12 @@ public class XacThucDangKyTOTP extends AppCompatActivity {
 
     private void backMainMenu() {
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    private void openHuyThanhCongActivity(String type) {
+        Intent intent = new Intent(this, ThanhCongActivity.class);
+        intent.putExtra("type", type);
         startActivity(intent);
     }
 }

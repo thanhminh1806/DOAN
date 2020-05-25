@@ -5,4 +5,7 @@
     <color name="colorAccent">#D81B60</color>
     <color name="blueColor">#0071ba</color>
     <color name="white">#ffffff</color>
+    <color name="bg_color_login">#0071ba</color>
+    <color name="bg_color_btn_login">#185ba8</color>
+    <color name="black_text">#090909</color>
 </resources>

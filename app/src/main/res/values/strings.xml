@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="USERNAME">Tên đăng nhập</string>
+    <string name="PASSWORD">Mật khẩu</string>
+    <string name="dangnhap">Đăng nhập</string>
+    <string name="contact">Contact: (84-24) 3928 8080 - ext.699/(84-28) 3914 6888</string>
+    <string name="notification">Thông báo</string>
+    <string name="empty_username_password">Tài khoản hoặc mật khẩu không để trống</string>
+    <string name="TiepTuc">Tiếp tục</string>
+    <string name="Tat">Tắt</string>
+    <string name="NhapMaXacThuc">Vui lòng nhập mã xác thực</string>
+    <string name="SaiMaXacThuc">Sai mã xác thực</string>
+    <string name="TKDaDangKyTOTP">Tài khoản đã đăng ký TOTP</string>
+    <string name="TKChuaDangKyTOTP">Tài khoản chưa đăng ký TOTP</string>
+    <string name="HanMucGiaoDich">Xem hạn mức giao dịch</string>
+    <string name="success_chuyentien">Chuyển tiền thành công</string>
+    <string name="success_dangky">Đăng ký TOTP thành công</string>
+    <string name="success_huydangky">Hủy đăng ký TOTP thành công</string>
+    <string name="DaLuu">Đã lưu</string>
 </resources>

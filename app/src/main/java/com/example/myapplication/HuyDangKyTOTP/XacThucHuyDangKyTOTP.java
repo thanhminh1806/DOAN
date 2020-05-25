@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.ApiService;
 import com.example.myapplication.ConnectApiServer;
+import com.example.myapplication.CustomDialog;
+import com.example.myapplication.DangKiTOTP.ThongTinDangKyQRCode;
 import com.example.myapplication.DangKiTOTP.ThongTinDangKyTOTP;
 import com.example.myapplication.DangKiTOTP.ThongtindangkyOTPmodelTruyenRa;
 import com.example.myapplication.DangKiTOTP.ThongtindangkyOTPmodelTruyenVao;
@@ -22,6 +24,7 @@ import com.example.myapplication.DangKiTOTP.XacThucOTPTruyenvao_Model;
 import com.example.myapplication.GlobalObject;
 import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
+import com.example.myapplication.ThanhCongActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -53,7 +56,7 @@ public class XacThucHuyDangKyTOTP extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(edt_nhapma.getText().toString().isEmpty()){
-                    Toast.makeText(XacThucHuyDangKyTOTP.this, "Vui lòng nhập mã xác thực", Toast.LENGTH_SHORT).show();
+                    CustomDialog.showDialog(XacThucHuyDangKyTOTP.this, getString(R.string.notification), getString(R.string.NhapMaXacThuc));
                 }else {
                     XacThucOTPTruyenvao_Model xacThucOTPTruyenvao_model = new XacThucOTPTruyenvao_Model("12345"
                             , "auth", new XacThucOTPTruyenvao_Model.Detail("auth", GlobalObject.REGISTER_ID, edt_nhapma.getText().toString()));
@@ -68,7 +71,7 @@ public class XacThucHuyDangKyTOTP extends AppCompatActivity {
 
                                 }
                             }else{
-                                Toast.makeText(XacThucHuyDangKyTOTP.this, "Sai mã xác thực", Toast.LENGTH_SHORT).show();
+                                CustomDialog.showDialog(XacThucHuyDangKyTOTP.this, getString(R.string.notification), getString(R.string.SaiMaXacThuc));
                             }
                         }
 
@@ -104,10 +107,10 @@ public class XacThucHuyDangKyTOTP extends AppCompatActivity {
                 if(response.body() != null && response.body().getDetail()!=null) {
                     if ("0".equals(response.body().getEc().toString())) {
                         Log.d("onResponse", "onResponse: " + response.toString());
-                        backMainMenu();
+                        openHuyThanhCongActivity("3");
                     }
                 }else {
-                    Toast.makeText(XacThucHuyDangKyTOTP.this, "Tài khoản chưa đăng ký TOTP", Toast.LENGTH_SHORT).show();
+                    CustomDialog.showDialog(XacThucHuyDangKyTOTP.this, getString(R.string.notification), getString(R.string.TKChuaDangKyTOTP));
                 }
             }
 
@@ -115,5 +118,11 @@ public class XacThucHuyDangKyTOTP extends AppCompatActivity {
                 Log.d("onResponse", "onResponse: " + t.toString());
             }
         });
+    }
+
+    private void openHuyThanhCongActivity(String type) {
+        Intent intent = new Intent(this, ThanhCongActivity.class);
+        intent.putExtra("type", type);
+        startActivity(intent);
     }
 }

@@ -73,13 +73,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="12315645465454 454"/>
+            android:text="12315645465454 454"
+            android:clickable="true"/>
 
         <Button
             android:id="@+id/btn_tieptuc"
             android:layout_marginTop="20dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Tiếp tục"/>
+            android:text="@string/TiepTuc"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_custom_button"/>
     </LinearLayout>
 </LinearLayout>
