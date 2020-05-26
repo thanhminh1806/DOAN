@@ -2,10 +2,11 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#0071ba</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#0071ba</color>
     <color name="blueColor">#0071ba</color>
     <color name="white">#ffffff</color>
     <color name="bg_color_login">#0071ba</color>
     <color name="bg_color_btn_login">#185ba8</color>
     <color name="black_text">#090909</color>
+    <color name="grey">#737373</color>
 </resources>

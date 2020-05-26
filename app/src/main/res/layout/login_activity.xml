@@ -24,7 +24,6 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:background="@drawable/bg_custom_edittext"
-            android:gravity="center"
             android:hint="@string/USERNAME"
             android:imeOptions="actionNext"
             android:inputType="textNoSuggestions|textCapCharacters"
@@ -32,8 +31,10 @@
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
             android:textAllCaps="true"
+            android:drawableLeft="@drawable/username"
+            android:drawablePadding="10dp"
             android:textColor="@color/black_text"
-            android:textColorHint="@color/black_text"
+            android:textColorHint="@color/grey"
             android:textSize="15sp" />
 
         <EditText
@@ -43,15 +44,16 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@drawable/bg_custom_edittext"
-            android:gravity="center"
             android:hint="@string/PASSWORD"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
             android:maxLines="1"
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
+            android:drawableLeft="@drawable/password"
+            android:drawablePadding="10dp"
             android:textColor="@color/black_text"
-            android:textColorHint="@color/black_text"
+            android:textColorHint="@color/grey"
             android:textSize="15sp"/>
 
         <Button

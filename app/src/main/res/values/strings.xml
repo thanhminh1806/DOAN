@@ -15,6 +15,10 @@
     <string name="HanMucGiaoDich">Xem hạn mức giao dịch</string>
     <string name="success_chuyentien">Chuyển tiền thành công</string>
     <string name="success_dangky">Đăng ký TOTP thành công</string>
+    <string name="huy_dich_vu_xac_thuc">Quý khách có chắc chắn muốn hủy dịch vụ xác thực này?</string>
     <string name="success_huydangky">Hủy đăng ký TOTP thành công</string>
     <string name="DaLuu">Đã lưu</string>
+    <string name="DongY">Đồng ý</string>
+    <string name="Huy">Hủy</string>
+    <string name="HoanTat">Hoàn tất</string>
 </resources>

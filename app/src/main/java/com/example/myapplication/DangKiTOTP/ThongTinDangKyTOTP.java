@@ -1,5 +1,8 @@
 package com.example.myapplication.DangKiTOTP;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +17,7 @@ import com.example.myapplication.ChuyenTien.XacThucChuyenTien;
 import com.example.myapplication.ConnectApiServer;
 import com.example.myapplication.CustomDialog;
 import com.example.myapplication.GlobalObject;
+import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
 
 import retrofit2.Call;
@@ -59,7 +63,7 @@ public class ThongTinDangKyTOTP extends AppCompatActivity {
                                 openThongTinDangKyQRCode(ImageBase64, secretKey);
                             }
                         }else {
-                            CustomDialog.showDialog(ThongTinDangKyTOTP.this, getString(R.string.notification), getString(R.string.TKDaDangKyTOTP));
+                            showDialog(ThongTinDangKyTOTP.this, getString(R.string.notification), getString(R.string.TKDaDangKyTOTP));
                         }
                     }
 
@@ -75,6 +79,38 @@ public class ThongTinDangKyTOTP extends AppCompatActivity {
         Intent intent = new Intent(this, ThongTinDangKyQRCode.class);
         intent.putExtra("ImageBase64", ImageBase64);
         intent.putExtra("secretKey", secretKey);
+        startActivity(intent);
+    }
+
+    public void showDialog(Context context, String title, String message){
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(context);
+        builder1.setTitle(title);
+        builder1.setMessage(message);
+        builder1.setCancelable(true);
+
+        builder1.setPositiveButton(
+                "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                        backMainMenu();
+                    }
+                });
+
+//                    builder1.setNegativeButton(
+//                            "No",
+//                            new DialogInterface.OnClickListener() {
+//                                public void onClick(DialogInterface dialog, int id) {
+//                                    dialog.cancel();
+//                                }
+//                            });
+
+        AlertDialog alert11 = builder1.create();
+        alert11.show();
+    }
+
+    private void backMainMenu() {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }

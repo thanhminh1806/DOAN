@@ -1,5 +1,8 @@
 package com.example.myapplication.HuyDangKyTOTP;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -34,7 +37,7 @@ public class HuyDangKyTOTP extends AppCompatActivity {
         btn_tatdangkytotp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchActivity();
+                showDialog(HuyDangKyTOTP.this, getString(R.string.notification), getString(R.string.huy_dich_vu_xac_thuc));
             }
         });
 
@@ -54,5 +57,33 @@ public class HuyDangKyTOTP extends AppCompatActivity {
     private void backMainMenu() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public void showDialog(Context context, String title, String message) {
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(context);
+        builder1.setTitle(title);
+        builder1.setMessage(message);
+        builder1.setCancelable(true);
+
+        builder1.setPositiveButton(
+                getString(R.string.DongY),
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                        launchActivity();
+                    }
+                });
+
+        builder1.setNegativeButton(
+                getString(R.string.Huy),
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                        backMainMenu();
+                    }
+                });
+
+        AlertDialog alert11 = builder1.create();
+        alert11.show();
     }
 }
