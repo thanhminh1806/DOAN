@@ -38,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(txtUsername.getText().toString().isEmpty() || txtPassword.getText().toString().isEmpty()){
                     CustomDialog.showDialog(LoginActivity.this, getString(R.string.notification), getString(R.string.empty_username_password));
                 }else{
+                    GlobalObject.REGISTER_ID = txtUsername.getText().toString();
                     openMainActivity();
                 }
 
