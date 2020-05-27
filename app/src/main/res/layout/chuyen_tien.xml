@@ -98,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_vertical|left"
-                        android:text="Tài khoản nguồn"
+                        android:text="Số dư khả dụng"
                         android:textSize="16sp" />
 
                     <TextView
